@@ -48,7 +48,6 @@ $('.fullscreen').on('click', (event) => {
     }
 });
 $(document).on('keyup', (event) => {
-    console.log(event.keyCode);
     switch (event.keyCode) {
     case 27:
         /* ESC key */
