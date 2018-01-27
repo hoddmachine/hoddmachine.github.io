@@ -2,8 +2,8 @@
 name: Your New Jekyll Site
 markdown: kramdown
 highlighter: rouge
-paginate: 10 # pagination basted on number of posts
-gems:
+plugins:
   - jekyll-babel
+  - octopress-autoprefixer
 exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss', 'bootstrap.scss'] # files to exclude
 
