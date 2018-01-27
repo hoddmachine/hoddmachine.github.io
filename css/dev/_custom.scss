@@ -34,17 +34,20 @@ Contents
     column-gap: 2vw;
     column-count: 3;
     padding: 1vw 2vw;
-
     @media only screen and (max-width: 600px) {
         & {
             column-count: 2;
         }
     }
 
-
     img {
         height: auto;
         width: 100%;
         margin: 1vw 0;
+        cursor: pointer;
+        transition: transform 400ms;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 }
