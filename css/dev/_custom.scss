@@ -30,14 +30,15 @@ Contents
 // 4. Shared Styles
 // --------------------------------------------------
 .gallery {
-    background: white;
+    background: black;
     column-gap: 2vw;
     column-count: 3;
     padding: 1vw 2vw;
 
     @media only screen and (max-width: 600px) {
         & {
-            column-count: 2;
+            column-count: 1;
+            padding: 4vw 0;
         }
     }
 
@@ -49,7 +50,13 @@ Contents
         transition: transform 400ms;
 
         &:hover {
-            /* transform: scale(1.02); */
+            /* transform: scale(1.05); */
+        }
+
+        @media only screen and (max-width: 600px) {
+            & {
+                padding: 4vw 0;
+            }
         }
     }
 }
@@ -57,19 +64,21 @@ Contents
 .fullscreen {
     display: none;
 
-    &.show {
-        background: rgba(0,0,0,.95);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        padding: 2vw;
-        animation: reveal 400ms;
+    @media only screen and (min-width: 600px) {
+        &.show {
+            background: rgba(0,0,0,.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding: 2vw;
+            animation: reveal 400ms;
+        }
     }
 
     img {
