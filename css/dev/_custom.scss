@@ -29,6 +29,11 @@ Contents
 
 // 4. Shared Styles
 // --------------------------------------------------
+
+body {
+    overflow-x: hidden;
+}
+
 .gallery {
     background: black;
     column-gap: 2vw;
