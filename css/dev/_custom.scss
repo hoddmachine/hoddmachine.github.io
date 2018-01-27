@@ -30,11 +30,13 @@ Contents
 // 4. Shared Styles
 // --------------------------------------------------
 .gallery {
-    column-count: 4;
-    column-gap: 0;
+    column-count: 2;
+    column-gap: 4vw;
+    padding: 2vw 4vw;
 
     img {
-        width: 100%;
         height: auto;
+        width: 100%;
+        margin: 2vw 0;
     }
 }
