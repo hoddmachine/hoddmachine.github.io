@@ -103,6 +103,10 @@
         padding: 24px;
         font-family: 'Titillium Web', sans-serif;
         font-size: 1.5em;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     .navbar-menu-toggle {
@@ -126,6 +130,10 @@
         border-radius: .5rem;
         background: rgb(255, 255, 255);
         color: #025977;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
