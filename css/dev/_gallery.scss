@@ -1,44 +1,13 @@
-//custom css goes here
-
-/*
-
-Contents
-================================
-
-1. Imports
-2. Navigation
-3. Pages
-4. Shared Styles
-
-================================
-
-*/
-
-// 1. Imports
-// --------------------------------------------------
-
-
-// 2. Navigation
-// --------------------------------------------------
-
-
-
-// 3. Pages
-// --------------------------------------------------
-
-
-// 4. Shared Styles
-// --------------------------------------------------
-
-body {
-    overflow-x: hidden;
-}
-
 .gallery {
-    background: black;
     column-gap: 2vw;
     column-count: 3;
     padding: 1vw 2vw;
+
+    @media only screen and (max-width: 768px) {
+        & {
+            column-count: 2;
+        }
+    }
 
     @media only screen and (max-width: 600px) {
         & {
@@ -71,7 +40,7 @@ body {
 
     @media only screen and (min-width: 600px) {
         &.show {
-            background: rgba(0,0,0,.95);
+            background: rgba(255,255,255,.95);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,16 +74,27 @@ body {
         padding: 24px;
         cursor: pointer;
         user-select: none;
+        transition: color 400ms;
 
         &:hover {
             color: white;
-            transition: color 400ms;
+        }
+    }
+
+    &.dark-controls {
+        .close, .before, .next {
+            color: rgba(0,0,0,.3);
+
+            &:hover {
+                color: rgba(0,0,0,.6);
+            }
         }
     }
 
     .close {
-        margin-left: -96px;
-        align-self: flex-start;
+        font-size: 36px;
+        margin-left: -84px;
+        /* align-self: flex-start; */
     }
 
     .before {
