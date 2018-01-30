@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <!-- responsive site -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <!-- chrome frame -->
     <meta name="description" content="Hörður Ragnarsson">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500|Titillium+Web:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500|Titillium+Web:200,700,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -15,7 +15,8 @@
 </head>
 <body>
     <nav role="navigation">{% include nav.html %}</nav>
-    {{ content }}
+    <section class="navbar-lead">{{ content }}</section>
+    <section class="collection">{% include collection.html %}</section>
     <section class="hide">{% include photography-commercial.html %}</section>
     <footer role="contentinfo">{% include footer.html %}</footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

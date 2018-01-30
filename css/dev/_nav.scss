@@ -137,6 +137,25 @@
     }
 }
 
+.navbar-lead {
+    width: 1250px;
+    margin: 0 auto;
+    margin-top: 19rem;
+    padding-left: 3rem;
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        width: 60%;
+        font-size: 1.1em;
+        margin-top: 2rem;
+        font-style: italic;
+    }
+}
+
+
 .navbar-hide-on-large {
     @media only screen and (min-width: 600px) {
         & {
@@ -192,6 +211,10 @@
             }
         }
     }
+
+    .navbar-lead {
+        margin-top: 15rem;
+    }
 }
 
 @media only screen and (max-width: 730px) {
@@ -246,5 +269,9 @@
         .navbar-collection {
             display: inline-block;
         }
+    }
+
+    .navbar-lead {
+        display: none;
     }
 }

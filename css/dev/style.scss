@@ -1,6 +1,7 @@
 @import "bootstrap/bootstrap-reboot";
 @import "type.scss";
 @import "nav.scss";
+@import "collection.scss";
 @import "gallery.scss";
 
 body {
@@ -16,7 +17,6 @@ body {
     &.stackable {
         position: absolute;
         width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
     }

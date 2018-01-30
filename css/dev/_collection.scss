@@ -1,0 +1,49 @@
+.collection {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 1250px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.collection-item {
+    background-size: cover;
+    height: 15rem;
+    margin: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    &.photography {
+        background-image: url("../img/photography/1.jpg");
+    }
+
+    &.video {
+        background-image: url("../img/photography/2.jpg");
+    }
+
+    &.software {
+        background-image: url("../img/photography/3.jpg");
+    }
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        transform: scale(1.05);
+        transition: transform 400ms;
+
+        h2 {
+            padding: 1rem 3rem;
+            background: rgba(178, 12, 53, 1);
+            transition: padding 400ms, background 400ms;
+        }
+    }
+
+    h2 {
+        color: white;
+        background: rgba(178, 12, 53, 0.8);
+        padding: 1rem 2rem;
+
+    }
+}
