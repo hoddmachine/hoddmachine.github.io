@@ -3,12 +3,13 @@
     flex-flow: row nowrap;
     max-width: 1250px;
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    transition: transform 400ms;
 }
 
 .collection-item {
     background-size: cover;
-    height: 15rem;
+    height: 30rem;
     margin: 1rem;
     flex: 1;
     display: flex;
@@ -28,22 +29,26 @@
         background-image: url("../img/photography/3.jpg");
     }
 
-    &:hover, &:active, &:focus {
+    &:hover {
         text-decoration: none;
-        transform: scale(1.05);
-        transition: transform 400ms;
 
         h2 {
-            padding: 1rem 3rem;
-            background: rgba(178, 12, 53, 1);
-            transition: padding 400ms, background 400ms;
+            width: 100%;
+            height: 100%;
+            font-size: 1.7em;
         }
     }
 
     h2 {
         color: white;
         background: rgba(178, 12, 53, 0.8);
-        padding: 1rem 2rem;
-
+        font-weight: 700;
+        height: 5rem;
+        width: 15rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 800ms, height 800ms, font-size 400ms;
     }
 }

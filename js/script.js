@@ -69,7 +69,6 @@ class Gallery {
         $('.fullscreen img').removeClass('show');
         $(img).addClass('show');
         this.setControlColor(img);
-        this.offsetCloseControl(img);
     }
 
     /* Choose white or black for overlaying controls on image */
@@ -88,18 +87,40 @@ class Gallery {
             $('.fullscreen').removeClass('dark-controls');
         }
     }
+}
 
-    offsetCloseControl (img) {
-        console.log(img);
-        let offset = (img.clientHeight - 84) * -1;
-        console.log(img.clientHeight, offset);
-        $('.fullscreen .close').css('margin-top', offset + 'px');
+class Navigation {
+    constructor () {
+        this.initializeEvents();
+    }
+
+    initializeEvents () {
+        $(window).on('hashchange', (event) => {
+            console.log('hashchange');
+            this.processHash(event.target.location.hash);
+        });
+    }
+
+    processHash (hash) {
+        console.log(hash);
+        switch (hash) {
+        case '':
+            $('.navbar, .navbar-container, .navbar-background, body').removeClass('small');
+            $('.navbar-lead, .collection').removeClass('hidden');
+            $('section.photography').addClass('hide');
+            break;
+        case '#photography':
+        case '#video':
+        case '#software':
+            $('.navbar, .navbar-container, .navbar-background, body').addClass('small');
+            $('.navbar-lead, .collection').addClass('hidden');
+            $('section.photography').removeClass('hide');
+            break;
+        }
     }
 }
 
 $(document).ready(() => {
     let gallery = new Gallery();
-    setTimeout(() => {
-        // $('.navbar, .navbar-container, .navbar-background').addClass('small');
-    }, 200);
+    let navigation = new Navigation();
 });

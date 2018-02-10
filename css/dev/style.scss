@@ -2,6 +2,7 @@
 @import "type.scss";
 @import "nav.scss";
 @import "collection.scss";
+@import "photography.scss";
 @import "gallery.scss";
 
 body {
@@ -13,6 +14,11 @@ body {
     display: none !important;
 }
 
+.hidden {
+    transform: scale(0);
+    transition: transform 400ms;
+}
+
 .container {
     &.stackable {
         position: absolute;
@@ -20,4 +26,10 @@ body {
         top: 0;
         left: 0;
     }
+}
+
+section {
+    position: absolute;
+    top: 0;
+    margin-top: 6rem;
 }
