@@ -99,21 +99,28 @@ class Navigation {
             console.log('hashchange');
             this.processHash(event.target.location.hash);
         });
+        $(window).on('load', (event) => {
+            console.log(event.target.location.hash);
+        });
     }
 
     processHash (hash) {
-        console.log(hash);
         switch (hash) {
         case '':
             $('.navbar, .navbar-container, .navbar-background, body').removeClass('small');
             $('.navbar-lead, .collection').removeClass('hidden');
             $('section.photography').addClass('hide');
             break;
+        case '#mobile-home':
+            $('.navbar, .navbar-container, .navbar-background, body').addClass('small');
+            $('.collection').addClass('show-mobile');
+            break;
         case '#photography':
         case '#video':
         case '#software':
             $('.navbar, .navbar-container, .navbar-background, body').addClass('small');
             $('.navbar-lead, .collection').addClass('hidden');
+            $('.collection').removeClass('show-mobile');
             $('section.photography').removeClass('hide');
             break;
         }

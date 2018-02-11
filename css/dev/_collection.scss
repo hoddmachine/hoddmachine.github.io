@@ -5,6 +5,23 @@
     margin: 0 auto;
     margin-top: 3rem;
     transition: transform 400ms;
+
+    @media only screen and (max-width: 730px) {
+        & {
+            position: absolute;
+            width: 100%;
+            flex-flow: column;
+            margin-top: 5rem;
+            padding: 1rem;
+            transform: scale(0);
+            transition: transform 400ms 400ms;
+            transform-origin: bottom;
+        }
+
+        &.show-mobile {
+            transform: scale(1);
+        }
+    }
 }
 
 .collection-item {
@@ -16,6 +33,14 @@
     align-items: center;
     justify-content: center;
     user-select: none;
+
+    @media only screen and (max-width: 730px) {
+        & {
+            height: 15rem;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+    }
 
     &.photography {
         background-image: url("../img/photography/1.jpg");
